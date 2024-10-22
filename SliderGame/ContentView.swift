@@ -18,7 +18,11 @@ struct ContentView: View {
             Spacer()
             Text("Подвинь слайдер на \(Int(targetValue))")
                 .font(.title)
-            UIKitSliderRepresentable(value: $currentValue, transparency: CGFloat(computeScore()))
+            HStack {
+                Text("0")
+                UIKitSliderRepresentable(value: $currentValue, transparency: CGFloat(computeScore()))
+                Text("100")
+            }
             
             Spacer()
             
